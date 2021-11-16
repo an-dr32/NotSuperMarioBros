@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Super-Mario-World';
+    src: url('../assets/font/Super-Mario-World.ttf');
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Super-Mario-World';
+    font-size: 50px;
+    margin-top: 100px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    -o-backdrop-filter: blur(12px);
+    -ms-backdrop-filter: blur(12px);
+}
