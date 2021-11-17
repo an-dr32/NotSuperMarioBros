@@ -1,4 +1,4 @@
-import { Scoreboard } from './components/scoreboard.js'; // Import the scoreboard component from the components folder and assign it to the Scoreboard variable 
+import { Scoreboard } from './components/Scoreboard.js'; // Import the scoreboard component from the components folder and assign it to the Scoreboard variable 
 
 export class Game extends Phaser.Scene {
     
