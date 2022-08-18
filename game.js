@@ -53,9 +53,7 @@ export class Game extends Phaser.Scene {
         //BACKGROUND
         this.add.image(400, 300, 'sky'); // add the sky image to the game
 
-        //GAMEOVER
-        this.gameOverImage = this.add.image(400, 300, 'gameover'); // add the gameover image to the game
-        this.gameOverImage.setVisible(false); // set the gameover image to be invisible
+        
 
         //SCOREBOARD
         this.scoreboard.create(); // create the scoreboard
@@ -146,6 +144,9 @@ export class Game extends Phaser.Scene {
 
         
         // create the fonts
+        //GAMEOVER
+        this.gameOverImage = this.add.image(400, 300, 'gameover'); // add the gameover image to the game
+        this.gameOverImage.setVisible(false); // set the gameover image to be invisible
         
     }
 
@@ -230,6 +231,8 @@ export class Game extends Phaser.Scene {
 
     hitBomb (player, bomb) {
         this.gameOverImage.setVisible(true); // set the gameover image to be visible
+        this.bombs.setVisible(false); // set the bombs to be invisible
+        this.player.setVisible(false); // set the player to be invisible
         this.physics.pause(); // pause the physics
         this.player.setTint(0xff0000); // set the player to be red
         this.player.anims.play('turn'); // play the turn animation
